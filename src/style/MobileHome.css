@@ -1,0 +1,145 @@
+/* Portfolio.css */
+
+/* ... Other styles ... */
+
+.skills {
+    margin-bottom: 40px;
+  }
+  
+  .skill {
+    margin-bottom: 10px;
+  }
+  
+  .skill-name {
+    font-weight: bold;
+  }
+  
+  .skill-level {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+  }
+  
+  .skill-level-bar {
+    height: 100%;
+    background-color: #3498db;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 600px) {
+    .portfolio {
+      padding: 20px;
+    }
+  
+    .introduction h1 {
+      font-size: 28px;
+    }
+  
+    .introduction p {
+      font-size: 16px;
+    }
+  
+    .about-me {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+  
+    
+  
+    .about-me p {
+      font-size: 14px;
+      color: #777;
+    }
+  
+  
+    .skill-name {
+      font-size: 14px;
+    }
+  
+    .skill-level-bar {
+      height: 6px;
+    }
+  }
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .section-title::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #007bff;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  
+  .contact-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
