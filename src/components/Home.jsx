@@ -5,12 +5,34 @@ import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
 import { useMediaQuery } from 'react-responsive';
 import MobileHome from './MobileHome';
+import {MdOutlineDarkMode} from 'react-icons/md';
+import {
+  enable as enableDarkMode,
+  disable as disableDarkMode,
+  auto as followSystemColorScheme,
+  exportGeneratedCSS as collectCSS,
+  isEnabled as isDarkReaderEnabled
+} from 'darkreader';
 
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (<>
+    <div className="dark-mode-toggle">
+    <MdOutlineDarkMode size={30} style={{marginLeft:'95%'}} onClick={()=>{
+      if(isDarkReaderEnabled()){
+        disableDarkMode();
+      }
+      else{
+        enableDarkMode({
+          brightness: 100,
+          contrast: 90,
+          sepia: 10
+        });
+      }
+    }}/>
+    </div>
   {isMobile ? <MobileHome/> : (<>
 
     <div className="portfolio-container">

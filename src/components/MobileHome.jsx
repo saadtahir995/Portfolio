@@ -5,6 +5,7 @@ import '../style/MobileHome.css';
 import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
 
+
 const skillsData = [
     { skill: 'HTML', level: 80 },
     { skill: 'CSS', level: 70 },
