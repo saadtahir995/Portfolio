@@ -1,37 +1,30 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../style/Home.css';
 import {TiWeatherPartlySunny,TiPencil,TiInputCheckedOutline} from 'react-icons/ti';
 import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
 import { useMediaQuery } from 'react-responsive';
 import MobileHome from './MobileHome';
-import {MdOutlineDarkMode} from 'react-icons/md';
+import {MdOutlineDarkMode,MdOutlineLightMode} from 'react-icons/md';
 import {
   enable as enableDarkMode,
   disable as disableDarkMode,
-  auto as followSystemColorScheme,
-  exportGeneratedCSS as collectCSS,
   isEnabled as isDarkReaderEnabled
 } from 'darkreader';
 
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-
+  const [isDarkMode, setDarkMode] = useState(isDarkReaderEnabled());
   return (<>
     <div className="dark-mode-toggle">
-    <MdOutlineDarkMode size={30} style={{marginLeft:'95%'}} onClick={()=>{
-      if(isDarkReaderEnabled()){
-        disableDarkMode();
-      }
-      else{
-        enableDarkMode({
-          brightness: 100,
-          contrast: 90,
-          sepia: 10
-        });
-      }
-    }}/>
+    {isDarkMode ? <MdOutlineLightMode size={30} style={{marginLeft:'95%'}} className="dark-mode-icon" onClick={() =>{ disableDarkMode()
+      setDarkMode(!isDarkMode)}} /> : <MdOutlineDarkMode size={30} className="dark-mode-icon" style={{marginLeft:'95%'}} onClick={() =>{ enableDarkMode({
+    brightness: 100,
+    contrast: 90,
+    sepia: 10,})
+    setDarkMode(!isDarkMode)
+    }} />}
     </div>
   {isMobile ? <MobileHome/> : (<>
 
