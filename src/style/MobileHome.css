@@ -1,6 +1,6 @@
-/* Portfolio.css */
-
-/* ... Other styles ... */
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .skills {
     margin-bottom: 40px;
@@ -142,4 +142,5 @@
   button:hover {
     background-color: #2980b9;
   }
+  
   

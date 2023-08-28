@@ -1,7 +1,7 @@
 /* Portfolio.css */
 
 .portfolio-container {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f8f8f8;
   padding: 20px;
   display: flex;
@@ -86,6 +86,67 @@ body{
   transform: translateX(-50%);
   border-radius: 2px;
 }
+/* Add this CSS to your NavigationMenu.css */
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Start with the menu hidden */
+  width: 180px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.open {
+  left: 0;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -250px; /* Start with the menu hidden */
+  width: 150px;
+  height: 60%;
+  background-color: transparent; /* Transparent background */
+  transition: left 0.3s ease;
+  z-index: 998;
+  padding-top: 60px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.menu.open {
+  left: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li{
+  color: aliceblue;
+  margin-top: 45%;
+}
+
 
 
 

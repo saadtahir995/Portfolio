@@ -11,12 +11,75 @@ import {
   disable as disableDarkMode,
   isEnabled as isDarkReaderEnabled
 } from 'darkreader';
+import { Link } from 'react-scroll';
 
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isDarkMode, setDarkMode] = useState(isDarkReaderEnabled());
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prevState => !prevState);
+  };
   return (<>
+  <div className={`navigation-menu ${isMenuOpen ? 'open' : ''}`}>
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+      <ul>
+          <li>
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-70} // Adjust this offset to fit your layout
+              duration={500}
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70} // Adjust this offset to fit your layout
+              duration={500}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={-70} // Adjust this offset to fit your layout
+              duration={500}
+            >
+              Education
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70} // Adjust this offset to fit your layout
+              duration={500}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+    </div>
     <div className="dark-mode-toggle">
     {isDarkMode ? <MdOutlineLightMode size={30} style={{marginLeft:'95%'}} className="dark-mode-icon" onClick={() =>{ disableDarkMode()
       setDarkMode(!isDarkMode)}} /> : <MdOutlineDarkMode size={30} className="dark-mode-icon" style={{marginLeft:'95%'}} onClick={() =>{ enableDarkMode({
@@ -146,7 +209,7 @@ const Home = () => {
           <li>Responsive Design</li>
         </ul>
       </div>
-      <div className='section'> 
+      <div className='section education'> 
         <h2 className='section-title'>Education</h2>
         <p>BS Computer Science</p>
         <p>University of Central Punajb</p>

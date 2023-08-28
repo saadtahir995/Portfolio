@@ -145,7 +145,7 @@ const MobileHome = () => {
       </div>
       <br />
       <hr />
-      <div className='section'> 
+      <div className='section education'> 
         <h2 className='section-title'>Education</h2>
         <p>BS Computer Science</p>
         <p>University of Central Punajb</p>
