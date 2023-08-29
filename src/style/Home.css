@@ -58,6 +58,7 @@
   padding: 5px 10px;
   background-color: #ddd;
   border-radius: 4px;
+  color: black;
 }
 
 .contact {
@@ -144,8 +145,30 @@ ul {
 }
 li{
   color: aliceblue;
-  margin-top: 45%;
+  margin-top: 60%;
 }
+/* Footer.css */
+
+/* ... other styles ... */
+
+.intro-enter {
+  opacity: 0;
+}
+
+.intro-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.intro-exit {
+  opacity: 1;
+}
+
+.intro-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
 
 
 

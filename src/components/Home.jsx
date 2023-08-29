@@ -12,12 +12,19 @@ import {
   isEnabled as isDarkReaderEnabled
 } from 'darkreader';
 import { Link } from 'react-scroll';
+import Footer from './Footer';
+import { CSSTransition } from 'react-transition-group';
+
 
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isDarkMode, setDarkMode] = useState(isDarkReaderEnabled());
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
+  React.useEffect(() => {
+    setShowIntro(true);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(prevState => !prevState);
@@ -95,10 +102,12 @@ const Home = () => {
     <a href="https://github.com/saadtahir995" target="_blank"
                   rel="noopener noreferrer"><BsGithub size={50} style={{marginLeft:'7%',marginBottom:'6%',color:'black'}}/></a>
 
-      <div className="intro">
-        <h1 className="intro-title">Hi, I'm Saad</h1>
-        <p className="intro-text">Welcome to my portfolio! Explore my work and skills.</p>
-      </div>
+<CSSTransition in={showIntro} appear={true} timeout={1000} classNames="intro">
+        <div className="intro">
+          <h1 className="intro-title">Hi, I'm Saad</h1>
+          <p className='intro-text'>Welcome to my portfolio!<br />I'm a passionate web developer with a strong focus on creating engaging and user-friendly experiences.</p>
+        </div>
+      </CSSTransition>
 
       <div className="section projects">
         <h1 className="section-title">Projects</h1>
@@ -244,6 +253,7 @@ const Home = () => {
       </div>
     </div>
     </>)}
+    <Footer/>
     </>
   );
 };
