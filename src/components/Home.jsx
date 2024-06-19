@@ -122,7 +122,7 @@ const Home = () => {
                 </div>
                 <p className="card-text">
                   The Weather App provides instant weather updates for cities worldwide.
-                  Users can search for cities and get real-time data.
+                  Users can search for cities.
                 </p>
                 <a
                   href="https://weather-app-eight-zeta-22.vercel.app/"
