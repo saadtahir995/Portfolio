@@ -160,16 +160,15 @@ const Home = () => {
           <div className="col-md-4">
             <div className="card shadow-lg project-card">
               <div className="card-body">
-                <h2 className="card-title">To-Do App</h2>
+                <h2 className="card-title">Movies Website</h2>
                 <div className="project-icon">
                   <TiInputCheckedOutline size={150} className="project-icon" />
                 </div>
                 <p className="card-text">
-                  A simple to-do app developed using MongoDB, Express, React, and Node.js.
-                  Users can add, edit, and delete tasks with ease.
+                  A simple movie website based on yts api watch all your favourite movies here
                 </p>
                 <a
-                  href="https://to-do-app-mauve-three.vercel.app/"
+                  href="https://moviedb-teal-two.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
