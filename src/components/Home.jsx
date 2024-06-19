@@ -215,7 +215,6 @@ const Home = () => {
           <li>MySql</li>
           <li>C</li>
           <li>C++</li>
-          <li>Responsive Design</li>
         </ul>
       </div>
       <div className='section education'> 
