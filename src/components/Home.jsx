@@ -5,6 +5,7 @@ import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
 import { useMediaQuery } from 'react-responsive';
 import MobileHome from './MobileHome';
+import { BiCameraMovie } from "react-icons/bi";
 import {MdOutlineDarkMode,MdOutlineLightMode} from 'react-icons/md';
 import {
   enable as enableDarkMode,
@@ -162,7 +163,8 @@ const Home = () => {
               <div className="card-body">
                 <h2 className="card-title">Movies Website</h2>
                 <div className="project-icon">
-                  <TiInputCheckedOutline size={150} className="project-icon" />
+                  <BiCameraMovie 
+                  size={150} className="project-icon" />
                 </div>
                 <p className="card-text">
                   A simple movie website based on yts api watch all your favourite movies here
