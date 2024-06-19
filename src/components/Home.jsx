@@ -122,8 +122,7 @@ const Home = () => {
                 </div>
                 <p className="card-text">
                   The Weather App provides instant weather updates for cities worldwide.
-                  Users can search for cities and get real-time data, including temperature,
-                  humidity, and more.
+                  Users can search for cities and get real-time data.
                 </p>
                 <a
                   href="https://weather-app-eight-zeta-22.vercel.app/"
@@ -167,7 +166,7 @@ const Home = () => {
                   size={150} className="project-icon" />
                 </div>
                 <p className="card-text">
-                  A simple movie website based on yts api watch all your favourite movies here
+                  A simple movie website based on yts api watch all your favourite movies here for free.
                 </p>
                 <a
                   href="https://moviedb-teal-two.vercel.app/"
