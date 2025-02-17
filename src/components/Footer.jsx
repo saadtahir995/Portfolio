@@ -5,7 +5,7 @@ import { MdEmail, MdPhone } from 'react-icons/md';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2023 Saad. All rights reserved. ❤️</p>
+      <p>&copy; 2025 Saad. All rights reserved. ❤️</p>
   </footer>
   );
 };

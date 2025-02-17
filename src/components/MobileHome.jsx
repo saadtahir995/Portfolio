@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { TiWeatherPartlySunny,TiPencil,TiInputCheckedOutline } from 'react-icons/ti';
 import '../style/MobileHome.css';
 import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
+import { BiCameraMovie } from 'react-icons/bi';
 
 
 const skillsData = [
@@ -75,7 +75,7 @@ const MobileHome = () => {
         <h2 className="section-title">Projects</h2>
         
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4" style={{marginTop:'5%'}}>
             <div className="card shadow-lg project-card">
               <div className="card-body">
                 <h2 className="card-title">Weather App</h2>
@@ -84,16 +84,20 @@ const MobileHome = () => {
                 </div>
                 <p className="card-text">
                   The Weather App provides instant weather updates for cities worldwide.
-                  Users can search for cities and get real-time data, including temperature,
-                  humidity, and more.
+                  Users can search for cities and get real-time weather data.
                 </p>
+                <div className="project-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Weather API</span>
+                </div>
                 <a
                   href="https://weather-app-eight-zeta-22.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
                 >
-                  Go to Project Website
+                  Live Demo
                 </a>
               </div>
             </div>
@@ -101,21 +105,28 @@ const MobileHome = () => {
           <div className="col-md-4" style={{marginTop:'5%'}}>
             <div className="card shadow-lg project-card">
               <div className="card-body">
-                <h2 className="card-title">Blog App</h2>
+                <h2 className="card-title">Streaming Platform</h2>
                 <div className="project-icon">
-                  <TiPencil size={135} className="project-icon" />
+                  <BiCameraMovie size={135} className="project-icon" />
                 </div>
                 <p className="card-text">
-                  A blog website created using MERN stack for writing and sharing articles.
-                  Users can create accounts, write articles, and interact with comments.
+                  A streaming platform built with TypeScript, React, and RESTful APIs,
+                  allowing users to watch seasons and episodes of videos.
                 </p>
+                <div className="project-tech">
+                  <span>TypeScript</span>
+                  <span>React</span>
+                  <span>RESTful APIs</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                </div>
                 <a
-                  href="https://blog-app-frontend-sandy.vercel.app/"
+                  href="https://anime-website-mu-eight.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
                 >
-                  Go to Project Website
+                  Live Demo
                 </a>
               </div>
             </div>
