@@ -3,8 +3,6 @@ import '../style/Home.css';
 import {TiWeatherPartlySunny,TiPencil,TiInputCheckedOutline} from 'react-icons/ti';
 import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
-import { useMediaQuery } from 'react-responsive';
-import MobileHome from './MobileHome';
 import { BiCameraMovie } from "react-icons/bi";
 import {MdOutlineDarkMode,MdOutlineLightMode} from 'react-icons/md';
 import {
@@ -21,7 +19,6 @@ import { SiNestjs, SiPostgresql, SiMongodb, SiPrisma, SiTypescript, SiMui, SiTai
 
 
 const Home = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isDarkMode, setDarkMode] = useState(isDarkReaderEnabled());
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
@@ -167,7 +164,6 @@ const Home = () => {
         />
       )}
     </div>
-  {isMobile ? <MobileHome/> : (<>
 
     <div className="portfolio-container">
     <a href="https://github.com/saadtahir995" target="_blank"
@@ -402,7 +398,6 @@ const Home = () => {
         <ContactForm/>
       </div>
     </div>
-    </>)}
     <Footer/>
     </>
   );
