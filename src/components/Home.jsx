@@ -3,7 +3,7 @@ import '../style/Home.css';
 import {TiWeatherPartlySunny,TiPencil,TiInputCheckedOutline} from 'react-icons/ti';
 import {BsGithub} from 'react-icons/bs';
 import ContactForm from './ContactForm';
-import { BiCameraMovie } from "react-icons/bi";
+import { BiCameraMovie, BiMessageSquareDetail } from "react-icons/bi";
 import {MdOutlineDarkMode,MdOutlineLightMode} from 'react-icons/md';
 import {
   enable as enableDarkMode,
@@ -273,22 +273,24 @@ const Home = () => {
           <div className="project-card">
             <div className="project-content">
               <div className="project-header">
-                <TiInputCheckedOutline className="project-icon" />
-                <h3>To-Do App</h3>
+                <BiMessageSquareDetail className="project-icon" />
+                <h3>Realtime Chat App</h3>
               </div>
               <p className="project-description">
-                A feature-rich todo application with user authentication and task management.
-                Built with MERN stack.
+                A real-time chat application built with React, Node.js, and Socket.IO that enables both public and private room
+                messaging along with AI-powered chat capabilities using Google's Generative AI (Gemini).
               </p>
               <div className="project-tech">
                 <span>React</span>
-                <span>MongoDB</span>
-                <span>Express</span>
                 <span>Node.js</span>
+                <span>Express</span>
+                <span>Socket.IO</span>
+                <span>WebSockets</span>
+                <span>Google Gemini AI</span>
               </div>
               <div className="project-links">
                 <a
-                  href="https://to-do-app-mauve-three.vercel.app/"
+                  href="https://chat-chi-ashen-44.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
