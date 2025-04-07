@@ -44,7 +44,7 @@ export const education = [
     degree: "Bachelor's Computer Science",
     period: "March 2021 - March 2025",
     achievements: [
-      "3.51 CGPA",
+      "3.54 GPA",
       "Relevant coursework: Database Systems, Web Development, Software Engineering",
     ],
     website: "https://ucp.edu.pk/",
