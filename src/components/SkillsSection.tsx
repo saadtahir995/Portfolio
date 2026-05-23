@@ -67,10 +67,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">💻</span> Programming Languages
+                <span className="mr-2 text-xl">📱</span> Frontend
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.programmingLanguages.map((skill, index) => (
+                {skills.frontend.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -80,10 +80,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">🎨</span> Frontend Development
+                <span className="mr-2 text-xl">⚙️</span> Backend
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.frontendDevelopment.map((skill, index) => (
+                {skills.backend.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -93,10 +93,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">⚙️</span> Backend Development
+                <span className="mr-2 text-xl">🗄️</span> Database
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.backendDevelopment.map((skill, index) => (
+                {skills.database.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -106,10 +106,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">🗄️</span> Database & Storage
+                <span className="mr-2 text-xl">☁️</span> DevOps & Tools
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.databaseAndStorage.map((skill, index) => (
+                {skills.devOpsAndTools.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -119,23 +119,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">☁️</span> Cloud & DevOps
+                <span className="mr-2 text-xl">💳</span> Payment Gateway
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.cloudAndDevOps.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
-                ))}
-              </div>
-            </GlassCard>
-          </motion.div>
-
-          <motion.div variants={skillCategoryVariants}>
-            <GlassCard className="p-4">
-              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">🧰</span> Tools & Services
-              </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.toolsAndServices.map((skill, index) => (
+                {skills.paymentGatewayIntegration.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>

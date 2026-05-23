@@ -2,12 +2,11 @@ import React from "react";
 import { projects } from "@/lib/data";
 import {
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
@@ -30,6 +29,11 @@ export default function ProjectsSection() {
                   <CardTitle className="text-center md:text-left group-hover:text-purple-500 transition-colors duration-300">
                     {project.title}
                   </CardTitle>
+                  {project.period && (
+                    <p className="text-xs text-muted-foreground text-center md:text-left mt-1">
+                      {project.period}
+                    </p>
+                  )}
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <ul className="list-disc ml-4 space-y-1 text-sm group-hover:space-y-2 transition-all duration-300">
@@ -48,17 +52,24 @@ export default function ProjectsSection() {
                   </ul>
                 </CardContent>
                 <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-purple-500/5 to-pink-500/5">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-sm text-muted-foreground hover:text-purple-500 transition-colors group/link pt-8"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
-                    View on GitHub 🔗
-                  </motion.a>
+                  {project.linkUrl ? (
+                    <motion.a
+                      href={project.linkUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-muted-foreground hover:text-purple-500 transition-colors group/link pt-8"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
+                      {project.link} 🔗
+                    </motion.a>
+                  ) : (
+                    <span className="flex items-center text-sm text-muted-foreground pt-8">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      {project.link}
+                    </span>
+                  )}
                 </CardFooter>
               </GlassCard>
             </MotionWrapper>

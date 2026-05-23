@@ -132,7 +132,7 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
-              🚀 Full Stack Developer with expertise in NextJS, Node.js, PostgreSQL, MongoDB, Express.js and React. Experienced in both backend and frontend development with strong focus on MERN stack. Skilled in creating efficient, scalable applications with robust API development and database management. Passionate about building high-performance systems and solving complex problems with elegant solutions.
+              📱 React Native Developer with expertise in React Native CLI and Expo for building high-performance cross-platform mobile applications for Android and iOS. Experienced in API integration and connecting mobile apps with robust backend systems. Also experienced in MERN stack development for building responsive and dynamic web applications using React, Node.js, Express.js, and MongoDB. Focused on delivering smooth, production-ready mobile and web experiences with clean, maintainable code.
             </p>
           </div>
         </MotionWrapper>
