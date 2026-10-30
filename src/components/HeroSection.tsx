@@ -1,5 +1,5 @@
 import { personalInfo } from "@/lib/data";
-import { Mail, Github, MapPin, Linkedin, Phone } from "lucide-react";
+import { Mail, Github, MapPin, Linkedin, Phone, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
               className="text-xl text-muted-foreground mb-6"
               variants={childVariants}
             >
-              Full Stack Developer 👨‍💻
+              {personalInfo.headline} 👨‍💻
             </motion.p>
 
             <motion.div
@@ -107,6 +107,17 @@ export default function HeroSection() {
                 <Linkedin className="h-4 w-4 mr-2" />
                 🔗 LinkedIn
               </motion.a>
+              <motion.a
+                href={personalInfo.upwork}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                variants={childVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Briefcase className="h-4 w-4 mr-2" />
+                Upwork · View my work
+              </motion.a>
             </motion.div>
           </div>
 
@@ -119,9 +130,11 @@ export default function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <img
-                src="/profile.jpg"
-                alt="Profile"
-                className="w-48 md:w-60 rounded-full relative ring-2 ring-purple-500/50"
+                src="/profile-upwork.jpg"
+                alt="Muhammad Saad Tahir"
+                width={800}
+                height={800}
+                className="w-48 h-48 md:w-60 md:h-60 rounded-full relative ring-2 ring-purple-500/50"
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -132,7 +145,7 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
-              📱 React Native Developer with expertise in React Native CLI and Expo for building high-performance cross-platform mobile applications for Android and iOS. Experienced in API integration and connecting mobile apps with robust backend systems. Also experienced in MERN stack development for building responsive and dynamic web applications using React, Node.js, Express.js, and MongoDB. Focused on delivering smooth, production-ready mobile and web experiences with clean, maintainable code.
+              {personalInfo.summary}
             </p>
           </div>
         </MotionWrapper>

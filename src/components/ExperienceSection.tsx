@@ -30,7 +30,7 @@ export default function ExperienceSection() {
             <TimelineItem
               key={job.company + job.period}
               title={`👨‍💻 ${job.position} | ${job.company}`}
-              subtitle={`🌍 ${job.location}`}
+              subtitle={job.location ? `🌍 ${job.location}` : ""}
               date={`📅 ${job.period}`}
               isLast={index === workExperience.length - 1}
               index={index}
@@ -43,6 +43,16 @@ export default function ExperienceSection() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
+                  {job.website && (
+                    <a
+                      href={job.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex text-sm text-purple-600 dark:text-purple-400 hover:underline mb-3"
+                    >
+                      {job.company === "Upwork" ? "View my Upwork profile ↗" : `Visit ${job.company} ↗`}
+                    </a>
+                  )}
                   <div className="flex items-center mb-3">
                     <div className="h-6 w-6 flex items-center justify-center rounded-full bg-purple-500/10 mr-2">
                       <Briefcase className="h-4 w-4 text-purple-500" />

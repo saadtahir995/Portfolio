@@ -19,6 +19,9 @@ export default function ProjectsSection() {
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
             🚀 Projects
           </h2>
+          <p className="text-sm text-muted-foreground mb-8 text-center md:text-left">
+            Government-backed and enterprise apps built at Fauree, alongside selected mobile and web projects. Explore each app and my role below.
+          </p>
         </MotionWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -26,9 +29,15 @@ export default function ProjectsSection() {
             <MotionWrapper key={project.title} delay={index * 0.2}>
               <GlassCard className="group overflow-hidden dark:border-purple-500/10 h-full flex flex-col">
                 <CardHeader className="bg-gradient-to-r from-purple-500/5 to-pink-500/5">
+                  <p className="text-xs font-medium text-purple-600 dark:text-purple-400 mb-2 text-center md:text-left">
+                    {project.category}
+                  </p>
                   <CardTitle className="text-center md:text-left group-hover:text-purple-500 transition-colors duration-300">
                     {project.title}
                   </CardTitle>
+                  <p className="text-xs text-muted-foreground text-center md:text-left mt-2">
+                    {project.role}
+                  </p>
                   {project.period && (
                     <p className="text-xs text-muted-foreground text-center md:text-left mt-1">
                       {project.period}
